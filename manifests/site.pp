@@ -149,6 +149,9 @@ node default {
 
     'user.name': 
       value => 'Jacob Tomaw'
+
+    'color.ui':
+      value => 'true'
   }
 
   repository {
