@@ -131,6 +131,8 @@ node default {
   include java
   include eclipse::java
 
+  include intellij
+
   class { 'ruby::global':
     version => '2.0.0'
   }
@@ -153,9 +155,11 @@ node default {
     '/Users/jtomaw/Development/sonar-wiki-sync':
       source   => 'git://git.orbitz.net/day/sonar-wiki-sync.git',
       provider => 'git';
-#    'my emacs config':
-#      source   => 'git://github.com/wfarr/.emacs.d.git',
-#      path     => '/etc/emacs.d',
-#      provider => 'git',
+  }
+
+  repository {
+    '/Users/jtomaw/Development/erma':
+      source   => 'git@github.com:erma/erma.git',
+      provider => 'git';
   }
 }
