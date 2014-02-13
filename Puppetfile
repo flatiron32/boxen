@@ -59,3 +59,12 @@ github "xquartz",     "1.1.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+github "osx"
+github "chrome"
+github "dropbox"
+github "adium"
+github "java"
+github "eclipse"
+github "tmux"
+github "caffeine"
