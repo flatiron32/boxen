@@ -141,6 +141,8 @@ node default {
 
   include intellij
 
+  include vagrant
+
   class { 'ruby::global':
     version => '2.0.0'
   }
