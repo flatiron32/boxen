@@ -99,6 +99,11 @@ GITHUBTARBALL
     osx (2.2.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-packer
+  specs:
+    packer (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (2.1.0)
@@ -180,6 +185,7 @@ DEPENDENCIES
   nodejs (= 3.7.0)
   openssl (= 1.0.0)
   osx (>= 0)
+  packer (>= 0)
   phantomjs (= 2.1.0)
   pkgconfig (= 1.0.0)
   reattachtousernamespace (>= 0)
