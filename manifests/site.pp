@@ -129,6 +129,8 @@ node default {
     install_options => '--fresh'
   }
 
+  include reattachtousernamespace
+
   include caffeine
   include chrome
   include dropbox

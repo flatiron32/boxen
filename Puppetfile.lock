@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: agustinvinao/puppet-reattach-to-user-namespace
   specs:
-    reattach-to-user-namespace (0.0.2)
+    reattachtousernamespace (0.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-adium
@@ -177,7 +177,7 @@ DEPENDENCIES
   osx (>= 0)
   phantomjs (= 2.1.0)
   pkgconfig (= 1.0.0)
-  reattach-to-user-namespace (>= 0)
+  reattachtousernamespace (>= 0)
   repository (= 2.3.0)
   ruby (= 7.2.4)
   stdlib (= 4.1.0)
