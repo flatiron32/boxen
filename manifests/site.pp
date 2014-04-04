@@ -116,7 +116,13 @@ node default {
       domain => NSGlobalDomain,
       key => "com.apple.mouse.scaling",
       type => float,
-      value => 2.0;
+      value => 0.875;
+
+   "Trackpad, Tracking":
+      domain => NSGlobalDomain,
+      key => "com.apple.trackpad.scaling",
+      type => float,
+      value => 0.875;
   }
 
   package { 'tmux':
@@ -148,21 +154,9 @@ node default {
       value  => 'jacob.tomaw@orbitz.com';
 
     'user.name': 
-      value => 'Jacob Tomaw'
+      value => 'Jacob Tomaw';
 
     'color.ui':
-      value => 'true'
-  }
-
-  repository {
-    '/Users/jtomaw/Development/sonar-wiki-sync':
-      source   => 'git://git.orbitz.net/day/sonar-wiki-sync.git',
-      provider => 'git';
-  }
-
-  repository {
-    '/Users/jtomaw/Development/erma':
-      source   => 'git@github.com:erma/erma.git',
-      provider => 'git';
+      value => 'true';
   }
 }
