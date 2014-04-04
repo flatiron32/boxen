@@ -141,6 +141,7 @@ node default {
 
   include intellij
 
+  include virtualbox
   include vagrant
 
   class { 'ruby::global':
