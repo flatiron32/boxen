@@ -158,5 +158,8 @@ node default {
 
     'color.ui':
       value => 'true';
+
+    'push.default':
+      value => 'simple';
   }
 }
