@@ -141,6 +141,7 @@ node default {
 
   include intellij
 
+  include packer
   include virtualbox
   include vagrant
 
