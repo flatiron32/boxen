@@ -61,15 +61,10 @@ node default {
   }
 
   # node versions
-  include nodejs::v0_6
-  include nodejs::v0_8
-  include nodejs::v0_10
+  nodejs::version { 'v0.10.33': }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
+  #ruby::version { '2.1.1': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -145,16 +140,6 @@ node default {
   include packer
   include virtualbox
   include vagrant
-
-  class { 'ruby::global':
-    version => '2.0.0'
-  }
-
-  ruby::gem { 
-    "RExchange":
-      gem     => 'rexchange',
-      ruby    => '2.0.0' 
-  }
 
   git::config::global { 
     'user.email':
