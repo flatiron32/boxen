@@ -161,12 +161,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
-    stdlib (4.2.0)
+    stdlib (4.2.1)
 
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
-    module-data (0.0.3)
+    module_data (0.0.3)
 
 DEPENDENCIES
   adium (>= 0)
@@ -197,10 +197,9 @@ DEPENDENCIES
   repository (= 2.3.0)
   ruby (= 8.1.4)
   skype (>= 0)
-  stdlib (= 4.2.0)
+  stdlib (= 4.2.1)
   sudo (= 1.0.0)
   tmux (>= 0)
   vagrant (>= 0)
   virtualbox (>= 0)
   xquartz (= 1.2.1)
-

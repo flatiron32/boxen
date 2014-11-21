@@ -63,8 +63,14 @@ node default {
   # node versions
   nodejs::version { 'v0.10.33': }
 
-  # default ruby versions
-  #ruby::version { '2.1.1': }
+  # common, useful packages
+  package {
+    [
+      'ack',
+      'findutils',
+      'gnu-tar'
+    ]:
+  }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
