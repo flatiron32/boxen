@@ -6,7 +6,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-adium
   specs:
-    adium (1.4.0)
+    adium (1.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-boxen
@@ -21,7 +21,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-chrome
   specs:
-    chrome (1.2.0)
+    chrome (1.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
@@ -31,12 +31,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-dropbox
   specs:
-    dropbox (1.4.1)
+    dropbox (1.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-eclipse
   specs:
-    eclipse (2.5.0)
+    eclipse (2.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -76,7 +76,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
-    java (1.7.1)
+    java (1.4.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -96,12 +96,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-osx
   specs:
-    osx (2.8.0)
+    osx (2.2.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-packer
   specs:
-    packer (1.3.0)
+    packer (1.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
@@ -126,7 +126,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-skype
   specs:
-    skype (1.0.9)
+    skype (1.0.8)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -141,7 +141,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
-    vagrant (3.2.0)
+    vagrant (3.0.7)
 
 GITHUBTARBALL
   remote: boxen/puppet-virtualbox
@@ -185,7 +185,7 @@ DEPENDENCIES
   inifile (= 1.1.1)
   intellij (>= 0)
   java (>= 0)
-  module_data (= 0.0.3)
+  module-data (= 0.0.3)
   nginx (= 1.4.3)
   nodejs (= 3.8.2)
   openssl (= 1.0.0)
@@ -203,4 +203,3 @@ DEPENDENCIES
   vagrant (>= 0)
   virtualbox (>= 0)
   xquartz (= 1.2.1)
-
