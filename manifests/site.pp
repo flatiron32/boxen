@@ -50,6 +50,13 @@ Service {
 
 Homebrew::Formula <| |> -> Package <| |>
 
+class lastpass {
+  package { 'LastPass':
+    provider => 'pkgdmg',
+    source   => 'https://download.lastpass.com/lpmacosx.dmg'
+  }
+}
+
 node default {
   # core modules, needed for most things
   include git
@@ -86,6 +93,7 @@ node default {
   include osx::universal_access::cursor_size
   include osx::universal_access::ctrl_mod_zoom
   include osx::global::enable_keyboard_control_access
+  include osx::global::tap_to_click
   include osx::global::expand_print_dialog
   include osx::global::expand_save_dialog 
   include osx::finder::empty_trash_securely
@@ -98,6 +106,8 @@ node default {
   include osx::dock::clear_dock
   include osx::dock::dim_hidden_apps
   include osx::dock::icon_size
+
+  include osx::keyboard::capslock_to_control
 
   boxen::osx_defaults {
     "Keyboard, Keyboard, Use all F1, F2, etc. keys as standard function keys":
@@ -138,11 +148,13 @@ node default {
   include adium
 
   include java
-  include eclipse::java
+#  include eclipse::java
 
   include packer
-  include virtualbox
+#  include virtualbox
   include vagrant
+
+  include lastpass
 
   git::config::global { 
     'user.email':
