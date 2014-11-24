@@ -155,6 +155,7 @@ node default {
   include chrome
   include dropbox
   include adium
+  include skype
 
   include java
 #  include eclipse::java
