@@ -106,6 +106,9 @@ node default {
   include osx::dock::clear_dock
   include osx::dock::dim_hidden_apps
   include osx::dock::icon_size
+  osx::dock::hot_corner { 'Top Left':
+    action => 'Put Display to Sleep'
+  }
 
   include osx::keyboard::capslock_to_control
 
