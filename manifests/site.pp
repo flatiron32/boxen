@@ -134,6 +134,12 @@ node default {
       key => "com.apple.trackpad.scaling",
       type => float,
       value => 0.875;
+   
+   "Datetime format":
+      domain => "com.apple.menuextra.clock",
+      key => DateFormat,
+      type => string,
+      value => "EEE MMM d  H:mm:ss";
   }
 
   package { 'tmux':
