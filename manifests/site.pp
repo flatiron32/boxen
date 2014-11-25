@@ -191,4 +191,16 @@ node default {
    ensure => 'link',
    target => '/Users/jtomaw/vimfiles/vimrc',
   }
+
+  repository { 
+    'my dot files':
+      source   => 'git@github.com:flatiron32/dotfiles.git',
+      path     => '/Users/jtomaw/dotfiles',
+      provider => 'git',
+  }
+
+  file { '/Users/jtomaw/.tmux.conf':
+   ensure => 'link',
+   target => '/Users/jtomaw/dotfiles/tmux.conf',
+  }
 }
