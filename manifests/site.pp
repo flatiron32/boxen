@@ -203,4 +203,9 @@ node default {
    ensure => 'link',
    target => '/Users/jtomaw/dotfiles/tmux.conf',
   }
+
+  file { '/Users/jtomaw/.curlrc':
+   ensure => 'link',
+   target => '/Users/jtomaw/dotfiles/curlrc',
+  }
 }
