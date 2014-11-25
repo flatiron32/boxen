@@ -179,4 +179,16 @@ node default {
     'push.default':
       value => 'simple';
   }
+
+  repository { 
+    'my vim configs':
+      source   => 'git@github.com:flatiron32/vimfiles.git',
+      path     => '/Users/jtomaw/vimfiles',
+      provider => 'git',
+  }
+
+  file { '/Users/jtomaw/.vimrc':
+   ensure => 'link',
+   target => '/Users/jtomaw/vimfiles/vimrc',
+  }
 }
