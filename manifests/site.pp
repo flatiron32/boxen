@@ -57,6 +57,13 @@ class lastpass {
   }
 }
 
+class securID {
+  package { 'SecurID':
+    provider => 'pkgdmg',
+    source   => 'ftp://ftp.emc.com/pub/agents/rsasecuridmac412.dmg'
+  }
+}
+
 node default {
   # core modules, needed for most things
   include git
@@ -208,4 +215,16 @@ node default {
    ensure => 'link',
    target => '/Users/jtomaw/dotfiles/curlrc',
   }
+
+  file { "/Users/jtomaw/Development":
+    ensure => "directory",
+  }
+
+  repository { 
+    'web-wl':
+      source   => 'ssh://git@stash.orbitz.net:7999/wl/web-wl.git',
+      path     => '/Users/jtomaw/Development/web-wl',
+      provider => 'git',
+  }
+
 }
