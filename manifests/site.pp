@@ -75,7 +75,7 @@ node default {
   }
 
   # node versions
-  nodejs::version { 'v0.10.33': }
+  nodejs::version { 'v0.10': }
 
   # common, useful packages
   package {
