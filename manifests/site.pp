@@ -236,4 +236,7 @@ node default {
       path     => '/Users/jtomaw/Development/gluQueue',
       provider => 'git',
   }
+
+  package { 'liquibase':
+  }
 }
