@@ -230,4 +230,10 @@ node default {
       provider => 'git',
   }
 
+  repository { 
+    'gluQueue':
+      source   => 'flatiron32/gluQueue',
+      path     => '/Users/jtomaw/Development/gluQueue',
+      provider => 'git',
+  }
 }
