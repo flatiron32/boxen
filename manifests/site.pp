@@ -169,7 +169,7 @@ node default {
 #  include eclipse::java
 
   include packer
-#  include virtualbox
+  include virtualbox
   include vagrant
 
   include lastpass
