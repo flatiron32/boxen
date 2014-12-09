@@ -157,6 +157,8 @@ node default {
     install_options => '--fresh'
   }
 
+  include mysql
+
   include reattachtousernamespace
 
   include caffeine

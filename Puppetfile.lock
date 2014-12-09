@@ -79,6 +79,11 @@ GITHUBTARBALL
     java (1.7.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-mysql
+  specs:
+    mysql (1.99.9)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.4.4)
@@ -186,6 +191,7 @@ DEPENDENCIES
   intellij (>= 0)
   java (>= 0)
   module_data (= 0.0.3)
+  mysql (>= 0)
   nginx (= 1.4.4)
   nodejs (= 4.0.0)
   openssl (= 1.0.0)
