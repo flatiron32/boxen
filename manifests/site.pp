@@ -153,6 +153,11 @@ node default {
       value => "EEE MMM d  H:mm:ss";
   }
 
+  exec { 'start located':
+    command => 'launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist',
+    user => root
+  }
+
   package { 'tmux':
     install_options => '--fresh'
   }
@@ -237,6 +242,10 @@ node default {
       provider => 'git',
   }
 
-  package { 'liquibase':
+  package { 
+    [
+      'liquibase',
+      'rlwrap'
+    ]:
   }
 }
