@@ -84,7 +84,8 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'bash-completion'
+      'bash-completion',
+      'python'
     ]:
   }
 
