@@ -49,7 +49,7 @@ Service {
 }
 
 Homebrew::Formula <| |> -> Package <| |>
-
+homebrew::tap { 'pivotal/tap': }
 class lastpass {
   package { 'LastPass':
     provider => 'pkgdmg',
@@ -83,7 +83,8 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'bash-completion'
     ]:
   }
 
@@ -245,7 +246,8 @@ node default {
   package { 
     [
       'liquibase',
-      'rlwrap'
+      'rlwrap',
+      'springboot'
     ]:
   }
 }
