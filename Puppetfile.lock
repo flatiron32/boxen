@@ -9,6 +9,11 @@ GITHUBTARBALL
     adium (1.4.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-bash
+  specs:
+    bash (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.10.1)
@@ -180,6 +185,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   adium (>= 0)
+  bash (>= 0)
   boxen (= 3.10.1)
   brewcask (= 0.0.4)
   caffeine (>= 0)

@@ -168,10 +168,11 @@ node default {
 
   include reattachtousernamespace
 
+  include adium
+  include bash
   include caffeine
   include chrome
   include dropbox
-  include adium
   include skype
 
   include java

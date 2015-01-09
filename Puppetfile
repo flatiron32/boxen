@@ -61,10 +61,11 @@ github "xquartz",     "1.2.1"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
+github "adium"
+github "bash"
 github "osx"
 github "chrome"
 github "dropbox"
-github "adium"
 github "java"
 github "eclipse"
 github "intellij"
