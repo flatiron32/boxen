@@ -84,6 +84,7 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
+      'go',
       'bash-completion',
       'python'
     ]:
@@ -165,7 +166,7 @@ node default {
   }
 
   include mysql
-
+  
   include reattachtousernamespace
 
   include adium
