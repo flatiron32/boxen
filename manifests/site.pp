@@ -75,8 +75,9 @@ node default {
   }
 
   # node versions
-  nodejs::version { '0.10': }
-  class { 'nodejs::global': version => '0.10' }
+#  class { 'nodejs::global': 
+#    version => '0.12.2' 
+#  }
 
   # common, useful packages
   package {
