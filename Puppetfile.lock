@@ -154,5 +154,5 @@ DEPENDENCIES
   sudo (= 1.0.0)
   tmux (>= 0)
   vagrant (>= 0)
-  virtualbox (>= 0)
+  virtualbox (= 1.0.13)
 
