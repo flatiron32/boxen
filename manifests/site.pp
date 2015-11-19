@@ -188,6 +188,11 @@ node default {
        require  => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ],
   }
 
+  package { 'Pulse Smart Connect':
+    provider => 'pkgdmg',
+    source   => '/opt/boxen/repo/pkgs/SmartConnect.pkg'
+  }
+
   git::config::global {
     'user.email':
       value  => 'jacob.tomaw@orbitz.com';
