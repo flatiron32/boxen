@@ -1,5 +1,6 @@
 require boxen::environment
 require homebrew
+include brewcask # taps homebrew-cask / installs brew-cask
 
 Exec {
   group       => 'staff',
@@ -173,6 +174,19 @@ node default {
   include vagrant
 
   include lastpass
+  sudoers { 'installer':
+    users    => $::boxen_user,
+    hosts    => 'ALL',
+    commands => [
+      '(ALL) SETENV:NOPASSWD: /usr/sbin/installer',
+    ],
+    type     => 'user_spec',
+  }
+
+  package { 'avira-antivirus':
+       provider => 'brewcask',
+       require  => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ],
+  }
 
   git::config::global {
     'user.email':
