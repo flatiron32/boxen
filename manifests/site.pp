@@ -1,5 +1,6 @@
 require boxen::environment
 require homebrew
+include brewcask # taps homebrew-cask / installs brew-cask
 
 Exec {
   group       => 'staff',
@@ -49,7 +50,7 @@ Service {
 }
 
 Homebrew::Formula <| |> -> Package <| |>
-homebrew::tap { 'pivotal/tap': }
+homebrew::tap { 'homebrew/binary': }
 class lastpass {
   package { 'LastPass':
     provider => 'pkgdmg',
@@ -74,11 +75,6 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # node versions
-#  class { 'nodejs::global': 
-#    version => '0.12.2' 
-#  }
-
   # common, useful packages
   package {
     [
@@ -87,7 +83,8 @@ node default {
       'gnu-tar',
       'go',
       'bash-completion',
-      'python'
+      'python',
+      'perforce'
     ]:
   }
 
@@ -107,7 +104,7 @@ node default {
   include osx::global::enable_keyboard_control_access
   include osx::global::tap_to_click
   include osx::global::expand_print_dialog
-  include osx::global::expand_save_dialog 
+  include osx::global::expand_save_dialog
   include osx::finder::empty_trash_securely
   include osx::finder::enable_quicklook_text_selection
   include osx::finder::show_all_on_desktop
@@ -149,7 +146,7 @@ node default {
       key => "com.apple.trackpad.scaling",
       type => float,
       value => 0.875;
-   
+
    "Datetime format":
       domain => "com.apple.menuextra.clock",
       key => DateFormat,
@@ -166,31 +163,42 @@ node default {
     install_options => '--fresh'
   }
 
-  include mysql
-  
-  include reattachtousernamespace
-
-  include adium
   include bash
   include caffeine
   include chrome
   include dropbox
-  include skype
 
   include java
 #  include eclipse::java
 
-  include packer
   include virtualbox
   include vagrant
 
   include lastpass
+  sudoers { 'installer':
+    users    => $::boxen_user,
+    hosts    => 'ALL',
+    commands => [
+      '(ALL) SETENV:NOPASSWD: /usr/sbin/installer',
+    ],
+    type     => 'user_spec',
+  }
 
-  git::config::global { 
+  package { 'avira-antivirus':
+       provider => 'brewcask',
+       require  => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ],
+  }
+
+  package { 'Pulse Smart Connect':
+    provider => 'pkgdmg',
+    source   => '/opt/boxen/repo/pkgs/SmartConnect.pkg'
+  }
+
+  git::config::global {
     'user.email':
       value  => 'jacob.tomaw@orbitz.com';
 
-    'user.name': 
+    'user.name':
       value => 'Jacob Tomaw';
 
     'color.ui':
@@ -200,7 +208,7 @@ node default {
       value => 'simple';
   }
 
-  repository { 
+  repository {
     'my vim configs':
       source   => 'git@github.com:flatiron32/vimfiles.git',
       path     => '/Users/jtomaw/vimfiles',
@@ -212,7 +220,7 @@ node default {
    target => '/Users/jtomaw/vimfiles/vimrc',
   }
 
-  repository { 
+  repository {
     'my dot files':
       source   => 'git@github.com:flatiron32/dotfiles.git',
       path     => '/Users/jtomaw/dotfiles',
@@ -231,27 +239,5 @@ node default {
 
   file { "/Users/jtomaw/Development":
     ensure => "directory",
-  }
-
-  repository { 
-    'web-wl':
-      source   => 'ssh://git@stash.orbitz.net:7999/wl/web-wl.git',
-      path     => '/Users/jtomaw/Development/web-wl',
-      provider => 'git',
-  }
-
-  repository { 
-    'gluQueue':
-      source   => 'flatiron32/gluQueue',
-      path     => '/Users/jtomaw/Development/gluQueue',
-      provider => 'git',
-  }
-
-  package { 
-    [
-      'liquibase',
-      'rlwrap',
-      'springboot'
-    ]:
   }
 }

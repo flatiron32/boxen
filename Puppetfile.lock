@@ -1,14 +1,4 @@
 GITHUBTARBALL
-  remote: agustinvinao/puppet-reattach-to-user-namespace
-  specs:
-    reattachtousernamespace (0.0.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-adium
-  specs:
-    adium (1.4.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-bash
   specs:
     bash (1.2.0)
@@ -32,11 +22,6 @@ GITHUBTARBALL
   remote: boxen/puppet-chrome
   specs:
     chrome (1.2.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-dnsmasq
-  specs:
-    dnsmasq (2.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-dropbox
@@ -64,11 +49,6 @@ GITHUBTARBALL
     git (2.7.92)
 
 GITHUBTARBALL
-  remote: boxen/puppet-go
-  specs:
-    go (2.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.13.0)
@@ -79,24 +59,9 @@ GITHUBTARBALL
     hub (1.4.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-intellij
-  specs:
-    intellij (1.5.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
     java (1.8.4)
-
-GITHUBTARBALL
-  remote: boxen/puppet-mysql
-  specs:
-    mysql (2.1.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-nginx
-  specs:
-    nginx (1.4.6)
 
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
@@ -114,16 +79,6 @@ GITHUBTARBALL
     osx (2.8.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-packer
-  specs:
-    packer (1.3.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-phantomjs
-  specs:
-    phantomjs (3.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-pkgconfig
   specs:
     pkgconfig (1.0.0)
@@ -136,12 +91,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.5.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-skype
-  specs:
-    skype (1.1.0)
+    ruby (8.5.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -164,11 +114,6 @@ GITHUBTARBALL
     virtualbox (1.0.13)
 
 GITHUBTARBALL
-  remote: boxen/puppet-xquartz
-  specs:
-    xquartz (1.2.1)
-
-GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.4.1)
@@ -184,41 +129,30 @@ GITHUBTARBALL
     module_data (0.0.4)
 
 DEPENDENCIES
-  adium (>= 0)
   bash (>= 0)
   boxen (= 3.11.0)
   brewcask (= 0.0.6)
   caffeine (>= 0)
   chrome (>= 0)
-  dnsmasq (= 2.0.1)
   dropbox (>= 0)
   eclipse (>= 0)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
   git (= 2.7.92)
-  go (= 2.1.0)
   homebrew (= 1.13.0)
   hub (= 1.4.1)
   inifile (= 1.4.1)
-  intellij (>= 0)
   java (>= 0)
   module_data (= 0.0.4)
-  mysql (>= 0)
-  nginx (= 1.4.6)
   nodejs (= 5.0.2)
   openssl (= 1.0.0)
   osx (>= 0)
-  packer (>= 0)
-  phantomjs (= 3.0.0)
   pkgconfig (= 1.0.0)
-  reattachtousernamespace (>= 0)
   repository (= 2.4.1)
-  ruby (= 8.5.2)
-  skype (>= 0)
+  ruby (= 8.5.3)
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
   tmux (>= 0)
   vagrant (>= 0)
   virtualbox (= 1.0.13)
-  xquartz (= 1.2.1)
 
