@@ -50,7 +50,7 @@ Service {
 }
 
 Homebrew::Formula <| |> -> Package <| |>
-homebrew::tap { 'pivotal/tap': }
+homebrew::tap { 'homebrew/binary': }
 class lastpass {
   package { 'LastPass':
     provider => 'pkgdmg',
@@ -83,7 +83,8 @@ node default {
       'gnu-tar',
       'go',
       'bash-completion',
-      'python'
+      'python',
+      'perforce'
     ]:
   }
 
