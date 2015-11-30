@@ -82,7 +82,6 @@ node default {
       'findutils',
       'gnu-tar',
       'go',
-      'bash-completion',
       'python',
       'perforce'
     ]:
@@ -164,6 +163,7 @@ node default {
   }
 
   include bash
+  include bash::completion
   include caffeine
   include chrome
   include dropbox
