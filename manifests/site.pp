@@ -171,9 +171,6 @@ node default {
   include java
 #  include eclipse::java
 
-  include virtualbox
-  include vagrant
-
   include lastpass
   sudoers { 'installer':
     users    => $::boxen_user,

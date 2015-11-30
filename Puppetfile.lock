@@ -104,16 +104,6 @@ GITHUBTARBALL
     tmux (1.0.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-vagrant
-  specs:
-    vagrant (3.3.3)
-
-GITHUBTARBALL
-  remote: boxen/puppet-virtualbox
-  specs:
-    virtualbox (1.0.13)
-
-GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.4.1)
@@ -153,6 +143,4 @@ DEPENDENCIES
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
   tmux (>= 0)
-  vagrant (>= 0)
-  virtualbox (= 1.0.13)
 
