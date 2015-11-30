@@ -181,8 +181,10 @@ node default {
     type     => 'user_spec',
   }
 
-  package { 'microsoft-office':
-       provider => 'brewcask'
+  package { 
+    ['microsoft-office',
+     'hipchat',
+    ]: provider => 'brewcask'
   }
 
   package { 'avira-antivirus':
