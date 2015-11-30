@@ -167,11 +167,8 @@ node default {
   include caffeine
   include chrome
   include dropbox
-
-  include java
-#  include eclipse::java
-
   include lastpass
+
   sudoers { 'installer':
     users    => $::boxen_user,
     hosts    => 'ALL',
@@ -184,6 +181,7 @@ node default {
   package { 
     ['microsoft-office',
      'hipchat',
+     'java',
     ]: provider => 'brewcask'
   }
 
