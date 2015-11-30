@@ -181,6 +181,10 @@ node default {
     type     => 'user_spec',
   }
 
+  package { 'microsoft-office':
+       provider => 'brewcask'
+  }
+
   package { 'avira-antivirus':
        provider => 'brewcask',
        require  => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ],
