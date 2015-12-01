@@ -83,7 +83,8 @@ node default {
       'gnu-tar',
       'go',
       'python',
-      'perforce'
+      'perforce',
+      'reattach-to-user-namespace',
     ]:
   }
 
