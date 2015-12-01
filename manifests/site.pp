@@ -85,6 +85,7 @@ node default {
       'python',
       'perforce',
       'reattach-to-user-namespace',
+      'node',
     ]:
   }
 
