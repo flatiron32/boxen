@@ -24,11 +24,6 @@ GITHUBTARBALL
     chrome (1.2.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-dropbox
-  specs:
-    dropbox (1.4.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-eclipse
   specs:
     eclipse (2.5.0)
@@ -119,7 +114,6 @@ DEPENDENCIES
   brewcask (= 0.0.6)
   caffeine (>= 0)
   chrome (>= 0)
-  dropbox (>= 0)
   eclipse (>= 0)
   foreman (= 1.2.0)
   gcc (= 3.0.2)

@@ -168,7 +168,6 @@ node default {
   include bash::completion
   include caffeine
   include chrome
-  include dropbox
   include lastpass
 
   sudoers { 'installer':
@@ -184,6 +183,7 @@ node default {
     ['microsoft-office',
      'hipchat',
      'java',
+     'dropbox',
     ]: provider => 'brewcask'
   }
 
