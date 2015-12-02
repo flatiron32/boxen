@@ -153,7 +153,19 @@ node default {
       key => DateFormat,
       type => string,
       value => "EEE MMM d  H:mm:ss";
+
+   "Shows battery percentage":
+      domain => 'com.apple.menuextra.battery',
+      key    => 'ShowPercent',
+      type   => 'string',
+      value  => 'YES',
+      user   => $::boxen_user,
+      notify => Exec['killall SystemUIServer'];
   }
+
+  exec { 'killall SystemUIServer':
+    refreshonly => true
+   }
 
   exec { 'start located':
     command => 'launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist',
