@@ -196,6 +196,7 @@ node default {
      'hipchat',
      'java',
      'dropbox',
+     'sublime-text',
     ]: provider => 'brewcask'
   }
 
